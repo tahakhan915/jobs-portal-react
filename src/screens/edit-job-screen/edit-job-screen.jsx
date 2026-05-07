@@ -25,7 +25,7 @@ const editJobScreen = ({updateJob}) => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch(`/api/jobs/${id}`);
+        const res = await fetch(`https://jobs-portal-react-7z54.onrender.com/jobs/${id}`);
         const data = await res.json();
 
         setTitle(data.title || "");

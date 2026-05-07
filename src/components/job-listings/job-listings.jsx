@@ -10,7 +10,7 @@ const JobListings = ({ isHome }) => {
     const fetchJobs = async () => {
 
       try {
-        const res = await fetch("/api/jobs");
+        const res = await fetch("https://jobs-portal-react-7z54.onrender.com/jobs");
         const data = await res.json();
         isHome ? setJobs(data.slice(0, 3)) : setJobs(data);
       } catch (error) {

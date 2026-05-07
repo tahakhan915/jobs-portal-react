@@ -13,7 +13,7 @@ import EditJobScreen from "../screens/edit-job-screen/edit-job-screen";
 const AppRoutes = () => {
   // add job
   const addJobSubmit = async (newJob) => {
-    const res = await fetch(`/api/jobs`, {
+    const res = await fetch(`https://jobs-portal-react-7z54.onrender.com/jobs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const AppRoutes = () => {
 
   // delete job
   const delJob = async (jobId) => {
-    const res = await fetch(`/api/jobs/${jobId}`, {
+    const res = await fetch(`https://jobs-portal-react-7z54.onrender.com/jobs/${jobId}`, {
       method: "DELETE",
     });
 
@@ -34,7 +34,7 @@ const AppRoutes = () => {
   };
 
   const updateJob = async (Job) => {
-    const res = await fetch(`/api/jobs/${Job.id}`, {
+    const res = await fetch(`https://jobs-portal-react-7z54.onrender.com/jobs/${Job.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
